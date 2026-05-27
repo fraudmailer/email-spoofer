@@ -1,41 +1,55 @@
 # Email Spoofer
 
-> Advanced SMTP testing and email simulation toolkit for authorized security research and infrastructure validation.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/Platform-Cross--Platform-black?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+</p>
 
-![Node.js](https://img.shields.io/badge/node-%3E%3D18-green.svg)
-![Platform](https://img.shields.io/badge/platform-cross--platform-lightgrey.svg)
+<p align="center">
+Lightweight SMTP email testing utility written in Python.
+</p>
+
+---
 
 ## Overview
 
-Email Spoofer is a lightweight email simulation framework designed for security researchers, red team operators, penetration testers, and system administrators who need to validate mail server configurations, SPF/DKIM/DMARC enforcement, email filtering behavior, and internal security awareness systems.
+Email Spoofer is a lightweight Python script designed for SMTP testing, email header experimentation, and mail delivery research in controlled or authorized environments.
 
-The project provides a modular environment for controlled SMTP testing and email header manipulation in isolated or authorized environments.
+The project uses Python's built-in SMTP libraries to create and send custom email messages through authenticated SMTP servers.
+
+Built as a single-file utility, the project focuses on simplicity, portability, and fast deployment.
 
 ---
 
 ## Features
 
-* Custom SMTP header generation
-* Advanced sender identity simulation
-* SPF / DKIM / DMARC testing workflows
-* HTML and plaintext email template support
-* Attachment handling
-* Proxy and relay support
-* Logging and delivery tracking
-* Multi-threaded delivery engine
+* Custom sender address support
+* SMTP authentication
+* TLS encrypted connections
+* Plaintext email delivery
+* File-based message body support
+* Command-line interface
+* Lightweight single-file architecture
 * Cross-platform compatibility
-* Modular architecture for custom integrations
+* Minimal dependencies
 
 ---
 
-## Screenshots
+## Repository Structure
 
 ```bash
-[+] SMTP Connection Established
-[+] DKIM Signature Generated
-[+] Sending Payload...
-[+] Delivery Status: Accepted
+.
+└── spoofer.py
 ```
+
+---
+
+## Requirements
+
+* Python 3.10+
+* Internet connection
+* Access to a valid SMTP server
 
 ---
 
@@ -44,42 +58,8 @@ The project provides a modular environment for controlled SMTP testing and email
 ## Clone Repository
 
 ```bash
-git clone https://github.com/fraudmailer/email-spoofer.git
+git clone https://github.com/yourname/email-spoofer.git
 cd email-spoofer
-```
-
-## Install Dependencies
-
-```bash
-npm install
-```
-
-## Start Application
-
-```bash
-npm start
-```
-
----
-
-# Configuration
-
-Edit the configuration file before running the application:
-
-```bash
-config/config.json
-```
-
-Example:
-
-```json
-{
-  "smtp_host": "smtp.example.com",
-  "smtp_port": 587,
-  "username": "user@example.com",
-  "password": "password",
-  "secure": false
-}
 ```
 
 ---
@@ -89,108 +69,101 @@ Example:
 ## Basic Execution
 
 ```bash
-node index.js
-```
-
-## Custom Template
-
-```bash
-node index.js --template templates/custom.html
-```
-
-## Debug Mode
-
-```bash
-node index.js --debug
+python spoofer.py \
+  --sender sender@example.com \
+  --recipient target@example.com \
+  --subject "Test Message" \
+  --body "Hello from Email Spoofer" \
+  --smtp-server smtp.gmail.com \
+  --smtp-port 587 \
+  --username your@email.com \
+  --password yourpassword
 ```
 
 ---
 
-# Project Structure
+# Command Line Arguments
+
+| Argument        | Description                  |
+| --------------- | ---------------------------- |
+| `--sender`      | Sender email address         |
+| `--recipient`   | Target recipient email       |
+| `--subject`     | Email subject                |
+| `--body`        | Email body text or file path |
+| `--smtp-server` | SMTP server address          |
+| `--smtp-port`   | SMTP server port             |
+| `--username`    | SMTP authentication username |
+| `--password`    | SMTP authentication password |
+| `--file`        | Read email body from file    |
+
+---
+
+# Example
 
 ```bash
-email-spoofer/
+python spoofer.py \
+  --sender admin@example.com \
+  --recipient test@example.com \
+  --subject "SMTP Test" \
+  --body message.txt \
+  --file \
+  --username smtp_user \
+  --password smtp_password
 ```
+
+---
+
+# Example Output
+
+```bash
+[+] Connecting to SMTP server...
+[+] Starting TLS session...
+[+] Authenticating...
+[+] Sending email...
+Email sent successfully to target@example.com
+```
+
+---
+
+# Design Philosophy
+
+* Single-file portability
+* Minimal setup requirements
+* Lightweight execution
+* Easy command-line operation
+* Simple SMTP workflow testing
 
 ---
 
 # Use Cases
 
-* Security awareness training
-* Email infrastructure testing
-* SMTP relay validation
-* Mail filtering analysis
-* Red team simulation exercises
-* Anti-spam configuration testing
-* Research and educational environments
+* SMTP server testing
+* Email delivery debugging
+* Mail relay validation
+* Security research labs
+* Internal awareness simulations
+* Email header experimentation
 
 ---
 
-# Security & Ethics
+# Security Notice
 
-This software is intended strictly for:
+This project is intended strictly for:
 
-* Authorized penetration testing
-* Defensive security research
-* Internal training environments
-* Infrastructure validation
+* Authorized security testing
+* Educational research
+* Internal lab environments
+* Defensive security analysis
 
 Unauthorized usage against third-party systems, phishing campaigns, credential theft, fraud, or malicious activity is strictly prohibited.
 
-Users are solely responsible for complying with all local laws and regulations.
-
----
-
-# Performance
-
-* Optimized SMTP connection handling
-* Low memory footprint
-* Async queue processing
-* High-speed batch delivery support
-
----
-
-# Requirements
-
-* Node.js 18+
-* npm 9+
-* Internet connection
-* Valid SMTP server access
-
----
-
-# Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Submit a pull request
-
----
-
-# Roadmap
-
-* Web dashboard
-* Real-time analytics
-* Template marketplace
-* API integrations
-* Containerized deployment
-* Multi-user support
-
----
+Users are responsible for complying with all applicable laws and regulations.
 
 ---
 
 # Disclaimer
 
-The developers assume no liability and are not responsible for misuse or damage caused by this project.
+The developers assume no responsibility for misuse or damage caused by this software.
 
-By using this software, you agree that you are operating only within environments you own or are explicitly authorized to assess.
+Use this project only in environments you own or are explicitly authorized to test.
 
-# Disclaimer
-
-The developers assume no liability and are not responsible for misuse or damage caused by this project.
-
-By using this software, you agree that you are operating only within environments you own or are explicitly authorized to assess.
