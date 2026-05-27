@@ -7,32 +7,30 @@
 </p>
 
 <p align="center">
-Lightweight SMTP email testing utility written in Python.
+Lightweight SMTP utility written in Python.
 </p>
 
 ---
 
 ## Overview
 
-Email Spoofer is a lightweight Python script designed for SMTP testing, email header experimentation, and mail delivery research in controlled or authorized environments.
+Email Spoofer is a lightweight Python-based SMTP utility designed for custom email delivery through authenticated SMTP servers.
 
-The project uses Python's built-in SMTP libraries to create and send custom email messages through authenticated SMTP servers.
-
-Built as a single-file utility, the project focuses on simplicity, portability, and fast deployment.
+Built as a single-file script, the project focuses on simplicity, portability, and fast execution without unnecessary dependencies or complex setup.
 
 ---
 
 ## Features
 
-* Custom sender address support
-* SMTP authentication
-* TLS encrypted connections
-* Plaintext email delivery
-* File-based message body support
-* Command-line interface
-* Lightweight single-file architecture
-* Cross-platform compatibility
-* Minimal dependencies
+- Custom sender address support
+- SMTP authentication
+- TLS encrypted connections
+- Plaintext email delivery
+- File-based message body support
+- Command-line interface
+- Lightweight single-file architecture
+- Cross-platform compatibility
+- Minimal dependencies
 
 ---
 
@@ -47,9 +45,9 @@ Built as a single-file utility, the project focuses on simplicity, portability, 
 
 ## Requirements
 
-* Python 3.10+
-* Internet connection
-* Access to a valid SMTP server
+- Python 3.10+
+- Internet connection
+- Access to a valid SMTP server
 
 ---
 
@@ -84,17 +82,17 @@ python spoofer.py \
 
 # Command Line Arguments
 
-| Argument        | Description                  |
-| --------------- | ---------------------------- |
-| `--sender`      | Sender email address         |
-| `--recipient`   | Target recipient email       |
-| `--subject`     | Email subject                |
-| `--body`        | Email body text or file path |
-| `--smtp-server` | SMTP server address          |
-| `--smtp-port`   | SMTP server port             |
-| `--username`    | SMTP authentication username |
-| `--password`    | SMTP authentication password |
-| `--file`        | Read email body from file    |
+| Argument | Description |
+|---|---|
+| `--sender` | Sender email address |
+| `--recipient` | Target recipient email |
+| `--subject` | Email subject |
+| `--body` | Email body text or file path |
+| `--smtp-server` | SMTP server address |
+| `--smtp-port` | SMTP server port |
+| `--username` | SMTP authentication username |
+| `--password` | SMTP authentication password |
+| `--file` | Read email body from file |
 
 ---
 
@@ -127,43 +125,27 @@ Email sent successfully to target@example.com
 
 # Design Philosophy
 
-* Single-file portability
-* Minimal setup requirements
-* Lightweight execution
-* Easy command-line operation
-* Simple SMTP workflow testing
+- Single-file portability
+- Minimal setup requirements
+- Lightweight execution
+- Easy command-line operation
+- Fast deployment
 
 ---
 
 # Use Cases
 
-* SMTP server testing
-* Email delivery debugging
-* Mail relay validation
-* Security research labs
-* Internal awareness simulations
-* Email header experimentation
-
----
-
-# Security Notice
-
-This project is intended strictly for:
-
-* Authorized security testing
-* Educational research
-* Internal lab environments
-* Defensive security analysis
-
-Unauthorized usage against third-party systems, phishing campaigns, credential theft, fraud, or malicious activity is strictly prohibited.
-
-Users are responsible for complying with all applicable laws and regulations.
+- SMTP workflows
+- Email delivery operations
+- Mail relay interaction
+- Header experimentation
+- Python SMTP automation
+- Command-line mail operations
 
 ---
 
 # Disclaimer
 
-The developers assume no responsibility for misuse or damage caused by this software.
+Use responsibly.
 
-Use this project only in environments you own or are explicitly authorized to test.
-
+The author is not responsible for misuse or damage caused by this software.
