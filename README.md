@@ -2,7 +2,6 @@
 
 > Advanced SMTP testing and email simulation toolkit for authorized security research and infrastructure validation.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node.js](https://img.shields.io/badge/node-%3E%3D18-green.svg)
 ![Platform](https://img.shields.io/badge/platform-cross--platform-lightgrey.svg)
 
@@ -110,7 +109,7 @@ node index.js --debug
 # Project Structure
 
 ```bash
-email-spoofer
+email-spoofer/
 ```
 
 ---
@@ -182,13 +181,13 @@ Contributions are welcome.
 
 ---
 
-# License
-
-Distributed under the MIT License.
-
-See `LICENSE` for more information.
-
 ---
+
+# Disclaimer
+
+The developers assume no liability and are not responsible for misuse or damage caused by this project.
+
+By using this software, you agree that you are operating only within environments you own or are explicitly authorized to assess.
 
 # Disclaimer
 
