@@ -58,7 +58,7 @@ Built as a single-file utility, the project focuses on simplicity, portability, 
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourname/email-spoofer.git
+[git clone https://github.com/yourname/email-spoofer.git](https://github.com/fraudmailer/email-spoofer)
 cd email-spoofer
 ```
 
